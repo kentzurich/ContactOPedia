@@ -1,4 +1,5 @@
 import { useState } from "react";
+import FavoriteContacts from "./FavoriteContacts";
 
 function ContactIndex() {
   const [contactList, setContactList] = useState([
@@ -35,7 +36,7 @@ function ContactIndex() {
         </div>
 
         <div className="py-2">
-          <div className="col-12">FAVORITES CONTACT</div>
+          <FavoriteContacts />
         </div>
 
         <div className="py-2">
