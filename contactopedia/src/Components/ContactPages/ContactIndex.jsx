@@ -36,7 +36,11 @@ function ContactIndex() {
         </div>
 
         <div className="py-2">
-          <FavoriteContacts />
+          <FavoriteContacts
+            contacts={contactList.filter(
+              (contact) => contact.isFavorite == true,
+            )}
+          />
         </div>
 
         <div className="py-2">
