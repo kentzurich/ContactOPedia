@@ -4,7 +4,13 @@ function Contact(props) {
       className="row p-md-2 mb-2"
       style={{ borderRadius: "20px", border: "1px solid #565" }}
     >
-      <div className="col-2 pt-2">Image</div>
+      <div className="col-2 pt-3">
+        <img
+          src={`https://ui-avatars.com/api/?name=${props.contact.name}`}
+          style={{ width: "80%" }}
+          alt={props.contact.name}
+        />
+      </div>
       <div className="col-6 text-warning pt-0">
         <span className="h4">{props.contact.name}</span>
         <br />

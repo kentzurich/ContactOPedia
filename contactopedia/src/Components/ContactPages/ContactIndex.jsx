@@ -7,18 +7,21 @@ function ContactIndex() {
       id: 1,
       name: "John Doe",
       email: "john.doe@example.com",
+      phone: "123-456-7890",
       isFavorite: false,
     },
     {
       id: 2,
       name: "Jane Smith",
       email: "jane.smith@example.com",
+      phone: "987-654-3210",
       isFavorite: true,
     },
     {
       id: 3,
       name: "Kent Zurich",
       email: "kent.zurich@example.com",
+      phone: "555-555-5555",
       isFavorite: false,
     },
   ]);
