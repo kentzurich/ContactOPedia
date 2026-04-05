@@ -39,6 +39,12 @@ function ContactIndex() {
     });
   }
 
+  function handleDeleteContact(contact) {
+    setContactList((prevState) => {
+      return prevState.filter((obj) => obj.id !== contact.id);
+    });
+  }
+
   return (
     <div className="container" style={{ minHeight: "85vh" }}>
       <div className="py-3">
@@ -54,6 +60,7 @@ function ContactIndex() {
         <div className="py-2">
           <FavoriteContacts
             favoriteClick={handleToogleFavorites}
+            deleteClick={handleDeleteContact}
             contacts={contactList.filter(
               (contact) => contact.isFavorite == true,
             )}
@@ -63,6 +70,7 @@ function ContactIndex() {
         <div className="py-2">
           <GeneralContacts
             favoriteClick={handleToogleFavorites}
+            deleteClick={handleDeleteContact}
             contacts={contactList.filter(
               (contact) => contact.isFavorite == false,
             )}

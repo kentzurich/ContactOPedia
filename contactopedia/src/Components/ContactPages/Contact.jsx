@@ -34,7 +34,10 @@ function Contact(props) {
           <i className="bi bi-pencil-square"></i>
         </button>
 
-        <button className="btn btn-danger btn-sm m-1">
+        <button
+          onClick={() => props.deleteClick(props.contact)}
+          className="btn btn-danger btn-sm m-1"
+        >
           <i className="bi bi-trash"></i>
         </button>
       </div>

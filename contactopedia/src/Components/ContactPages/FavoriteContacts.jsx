@@ -11,6 +11,7 @@ function FavoriteContacts(props) {
         <div className="p-2">
           <Contact
             favoriteClick={props.favoriteClick}
+            deleteClick={props.deleteClick}
             contact={contact}
             key={index}
           ></Contact>
