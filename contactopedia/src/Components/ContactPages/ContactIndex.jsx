@@ -28,7 +28,15 @@ function ContactIndex() {
   ]);
 
   function handleToogleFavorites(contact) {
-    console.log(contact);
+    setContactList((prevState) => {
+      return prevState.map((obj) => {
+        if (obj.id === contact.id) {
+          return { ...obj, isFavorite: !obj.isFavorite };
+        }
+
+        return obj;
+      });
+    });
   }
 
   return (
