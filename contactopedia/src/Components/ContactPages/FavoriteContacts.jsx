@@ -9,7 +9,11 @@ function FavoriteContacts(props) {
       <div className="text-center text-white-50">Favorites</div>
       {props.contacts.map((contact, index) => (
         <div className="p-2">
-          <Contact contact={contact} key={index}></Contact>
+          <Contact
+            favoriteClick={props.favoriteClick}
+            contact={contact}
+            key={index}
+          ></Contact>
         </div>
       ))}
     </div>

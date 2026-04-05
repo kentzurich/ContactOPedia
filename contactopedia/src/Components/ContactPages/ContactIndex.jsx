@@ -27,6 +27,10 @@ function ContactIndex() {
     },
   ]);
 
+  function handleToogleFavorites(contact) {
+    console.log(contact);
+  }
+
   return (
     <div className="container" style={{ minHeight: "85vh" }}>
       <div className="py-3">
@@ -41,6 +45,7 @@ function ContactIndex() {
 
         <div className="py-2">
           <FavoriteContacts
+            favoriteClick={handleToogleFavorites}
             contacts={contactList.filter(
               (contact) => contact.isFavorite == true,
             )}
@@ -49,6 +54,7 @@ function ContactIndex() {
 
         <div className="py-2">
           <GeneralContacts
+            favoriteClick={handleToogleFavorites}
             contacts={contactList.filter(
               (contact) => contact.isFavorite == false,
             )}
